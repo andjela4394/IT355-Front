@@ -1,0 +1,41 @@
+header{
+    background: whitesmoke;
+    padding: 0;
+    border-bottom: 1px solid purple;
+}
+
+a{
+    color: purple;
+}
+
+a:hover{
+    background: purple;
+    color: white;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+a.logo{
+    font-weight: bold;
+    font-size: larger;
+    padding-top: 20px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li a{
+    padding: 1em;
+    display: inline-block;
+}
+
+li{
+    display: inline;
+}
+

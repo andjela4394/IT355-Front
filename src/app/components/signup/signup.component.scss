@@ -1,0 +1,33 @@
+.card{
+    margin-top: 50px;
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50px;
+    background: hsla(270, 89%, 67%, 1);
+    background: linear-gradient(90deg, hsla(270, 89%, 67%, 1) 0%, hsla(300, 89%, 70%, 1) 100%);
+}
+
+#signup{
+    background-color: black;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+#signup:hover{
+    opacity: 0.8;
+}
+
+#login{
+    color: white;
+}
+
+#login:hover{
+    opacity: 0.8;
+}
+
+#txt{
+    margin: 10px;
+}

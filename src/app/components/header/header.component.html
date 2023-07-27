@@ -1,0 +1,19 @@
+
+<header>
+    <div class="container"> 
+        <a href="#" routerLink="/home" class="logo">Locket</a>
+        <nav>
+            <ul *ngIf="isLoggedIn">
+                <li *ngIf="isAdmin">
+                    Admin
+                </li>
+                <li>
+                    <a href="#" routerLink="/cart" class="counter">Cart</a>
+                </li>
+                <li>
+                    <a href="#" class="counter" (click)="logout()">Logout ({{username}})</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

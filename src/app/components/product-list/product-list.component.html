@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="search">
+    <input type="text" [(ngModel)]="searchKeyword" (input)="search()" placeholder="Search by name">
+    <select [(ngModel)]="selectedCategory" (change)="filterByCategory($event)">
+        <option value="All">All</option>
+        <option value="BRACELET">Bracelet</option>
+        <option value="NECKLASE">Necklace</option>
+        <option value="EARINGS">Earrings</option>
+        <option value="RING">Ring</option>
+      </select>
+      
+  </div>
+  
+  <div *ngIf="filteredProducts.length === 0">
+    No products found.
+  </div>
+
+  <ul>
+    <li *ngFor="let product of filteredProducts">
+        <a routerLink="/products/{{product.id}}">
+         <img src="{{product.image}}" alt="nakit">
+         <div class="content">
+            <div class="name">
+                {{product.name}}
+            </div>
+            <div class="category">
+                {{product.category}}
+                {{product.material}}
+            </div>
+            <div class="price">
+                <span>
+                    {{product.price|currency}}
+                </span>
+            </div>
+         </div>
+        </a>
+        <button class="add-to-cart" (click)="addToCart(product)">Add to Cart</button>
+    </li>
+</ul>
+
+  

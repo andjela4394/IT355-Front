@@ -1,0 +1,19 @@
+<div class="cart-entries-container">
+<div *ngIf="cartItems">
+  <h2>Cart Items</h2>
+  <ul>
+    <li *ngFor="let item of cartItems" class="cart-entry">
+      <div class="entry-details">
+        <img [src]="item.productImage" alt="Product Image" />
+        <div class="product-name">
+          {{ item.productName }}
+        </div>
+        <div class="count">
+          Price: {{ item.productPrice }}
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<button (click)="placeOrder()">Place Order</button>
+</div>
